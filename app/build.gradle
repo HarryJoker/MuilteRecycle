@@ -22,6 +22,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.alibaba:fastjson:1.2.62'
-    compile project(path: ':library')
-//    implementation 'com.github.HarryJoker:MuilteRecycle:1.0.3'
+//    compile project(path: ':library')
+    implementation 'com.github.HarryJoker:MuilteRecycle:1.0.4'
 }
