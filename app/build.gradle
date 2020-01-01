@@ -23,6 +23,5 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.alibaba:fastjson:1.2.62'
     compile project(path: ':library')
-//    implementation 'com.github.HarryJoker:MuilteRecycle:1.0.1'
-//    implementation 'com.github.HarryJoker:MuilteRecycle:1.0.1'
+//    implementation 'com.github.HarryJoker:MuilteRecycle:1.0.2'
 }
