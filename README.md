@@ -15,14 +15,9 @@ MuilteRecycler，使用JSON对象作为列表数据源，只需要配置子列�
 ![image](https://github.com/HarryJoker/MuilteRecycle/blob/master/image/device-2020-01-01-204830_Four_.gif)
 
 # 使用
-`allprojects {
-	repositories {
-		maven { url 'https://jitpack.io' }
-	}
-}
-`
 
-`
+```
 dependencies {
-	        implementation 'com.github.HarryJoker:MuilteRecycle:1.0.4'
-}`
+	implementation 'com.github.HarryJoker:MuilteRecycle:1.0.4'
+}
+```
