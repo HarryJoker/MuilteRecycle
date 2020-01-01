@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.orhanobut.logger.Logger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,6 +19,8 @@ import java.util.List;
  * Description:
  */
 public abstract class MuliteRecycleAdapter extends RecyclerView.Adapter<MuliteRecycleAdapter.BaseItemViewHolder> {
+
+    String TAG = "MuliteRecycleAdapter";
 
     private Activity mContext;
 
@@ -78,7 +79,7 @@ public abstract class MuliteRecycleAdapter extends RecyclerView.Adapter<MuliteRe
     @Override
     public int getItemCount() {
         int itemCount = sumChildsSizeByRank(-1);
-        Logger.d("item count:" + itemCount);
+//        Log.d(TAG, "item count:" + itemCount);
         return itemCount;
     }
 
@@ -329,7 +330,7 @@ public abstract class MuliteRecycleAdapter extends RecyclerView.Adapter<MuliteRe
         } else {
             offsetPos = calcuteOffsetPosOutRank(rank, position);
         }
-        Log.i("item", "position:" + position + ", offsetPos:" + offsetPos);
+//        Log.i("item", "position:" + position + ", offsetPos:" + offsetPos);
 //        if (jsonObject == null) {
 //            throw new NullPointerException("Null Point, position can not mate item data");
 //        }
@@ -378,7 +379,7 @@ public abstract class MuliteRecycleAdapter extends RecyclerView.Adapter<MuliteRe
     public void onBindViewHolder(@NonNull BaseItemViewHolder holder, int position) {
         holder.itemView.setTag(position);
 
-        Logger.d("binder position:" + position + ", rankPositions:" + mRankPositions);
+//        Log.d(TAG, "binder position:" + position + ", rankPositions:" + mRankPositions);
 
 
         if (holder.ivIndicator != null) {
@@ -424,7 +425,7 @@ public abstract class MuliteRecycleAdapter extends RecyclerView.Adapter<MuliteRe
                 int type = getItemViewType(position);
                 if (type < mRankKeys.size()) {
                     int offsetPos = calcuteRankPosition(type, position);
-                    Log.d("click", "position:" + position + ", type:" + type + ", offsetPos:" + offsetPos);
+//                    Log.d("click", "position:" + position + ", type:" + type + ", offsetPos:" + offsetPos);
                     updateRankPosition(type, offsetPos);
                 } else {
                     if (!onItemClick(type, position, getItem(position))) {
