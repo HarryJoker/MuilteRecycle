@@ -28,6 +28,6 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'com.alibaba:fastjson:1.2.61'
-    implementation 'com.orhanobut:logger:2.1.1'
+    implementation 'com.alibaba:fastjson:1.2.62'
+    implementation 'com.orhanobut:logger:2.2.0'
 }
